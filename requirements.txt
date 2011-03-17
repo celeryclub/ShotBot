@@ -1,0 +1,17 @@
+-e svn+http://code.djangoproject.com/svn/django/trunk#egg=Django
+Markdown
+PIL
+South
+django-pagination
+django-taggit
+ez-setup
+httplib2
+oauth2
+paramiko
+psycopg2
+pycrypto
+smartypants
+titlecase
+-e git+http://github.com/mikemeyer/typogrify.git#egg=typogrify
+werkzeug
+-e git+http://github.com/django-extensions/django-extensions.git#egg=django-extensions

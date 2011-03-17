@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<title>ShotBot</title>
+
+		<meta name="description" content="A fun-size internal app for tracking coffee consumption at CoWork Greenville." />
+		<meta name="keywords" content="Greenville, SC, Michael, Mike, Meyer, mikemeyer, coffee, CoWork Greenville" />
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+
+		<link rel="stylesheet" href="{{ MEDIA_URL }}style.css" media="all">
+{% comment %}
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		
+		<!-- LOVE Modernizr -->
+		<script src="{{ MEDIA_URL }}modernizr-1.7.min.js"></script>
+		
+		<script src="{{ MEDIA_URL }}site.js"></script>
+
+{% endcomment %}
+
+		<!-- Google Analytics -->
+		<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-12714715-3']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<h1>ShotBot</h1>
+		</header>
+		<div id="content">
+
+{% block content %}{% endblock %}
+
+		</div>
+		<footer><p>{% if request.user.is_authenticated %}
+				<a class='logout' href='/logout'>Log Out</a>{% else %}
+			<a class='credit' href="http://mikemeyer.im">Michael Meyer was here</a>
+{% endif %}</p></footer>
+	</body>
+</html>
